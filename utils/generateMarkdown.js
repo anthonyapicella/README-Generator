@@ -5,11 +5,11 @@ function renderLicenseBadge(license) {
     switch (license) {
         case 'MIT':
             licenseBadge =
-                '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/Apache-2.0)';
+                '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
             return licenseBadge;
         case 'APACHE 2.0':
             licenseBadge =
-                '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/MIT)';
+                '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
             return licenseBadge;
         case 'GPL 3.0':
             licenseBadge =
@@ -39,16 +39,37 @@ function generateMarkdown(data) {
     </li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contributors">Contributors</a></li>
     <li><a href="#testing">Testing</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#questions?">Contact</a></li>
   </ol>
 
   ## About
   ${data.description}
 
-  
+  ## Installation
+  ${data.installation}
 
+  ## Usage
+  ${data.usage}
+
+  ## Contributors
+  ${data.contributors}
+
+  ## Testing
+  ${data.test}
+
+  ## License
+  This application is distributed under the ${data.license} license.
+
+  ## Questions?
+  *Feel free to contact me!*
+  
+  GitHub: [${data.username}](https://github.com/${data.username})
+
+  Email: ${data.email}
+  
 `;
 }
 
